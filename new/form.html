@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-    <head>
-        <meta charset="UTF-8">
-        <title>הרשמה</title>
-        <link rel="stylesheet" href="/new/form.css" />
-        <meta name="viewport" content="width=device-width, initial-scale:1.0">
-    </head>
-    <body>
-        <h1>הרשמה <strong>עכשיו בחינם</strong></h1>
-        <p>מלאו את השדות החסרים והתחילו <strong>לטנדקס</strong></p>
-        <form action=''>
-            <fieldset>
-                <label for="first-name">שם פרטי <input id="first-name"
-                        name="first-name" type="text" required /></label>
-                <label for="last-name">שם משפחה <input id="last-name"
-                        name="last-name" type="text" required /></label>
-                <label for="email">אימייל<input id="email" name="email"
-                        type="email" required /></label>
-                <label for="new-password">סיסמא <input id="new-password"
-                        name="new-password" type="password"
-                        pattern="[a-z0-5]{8,}" required /></label>
-            </fieldset>
-            <fieldset>
-                <label for="personal-account"><input id="personal-account"
-                        type="radio" name="account-type" class="inline" /> זכר</label>
-                <label for="business-account"><input id="business-account"
-                        type="radio" name="account-type" class="inline" /> נקבה</label>
-                <label for="business-account"><input id="business-account"
-                        type="radio" name="account-type" class="inline" /> לא
-                    מוגדר</label>
-                <label for="terms-and-conditions" name="terms-and-conditions">
-                    <input id="terms-and-conditions" type="checkbox" required
-                        name="terms-and-conditions" class="inline" />אני מאשר/ת
-                    שקראתי את <a
-                        href="https://www.freecodecamp.org/news/terms-of-service/">התקנון</a>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label for="profile-picture">כאן, העלו תמונת פרופיל מושכת:
-                    <input id="profile-picture" type="file" name="file" /></label>
-                <label for="age">גיל:(בשנות כלב) <input id="age" type="number"
-                        name="age" min="13" max="120" /></label>
-                <label for="referrer">איך שמעת עלינו?
-                    <select id="referrer" name="referrer">
-                        <option value="">בחרו ערך אחד מהרשימה</option>
-                        <option value="1">חבר\ה</option>
-                        <option value="2">רשתות חברתיות</option>
-                        <option value="3">w3school</option>
-                        <option value="4">אחר</option>
-                    </select>
-                </label>
-                <label for="bio">מה תרצו שיידעו עליכם?
-                    <textarea id="bio" name="bio" rows="3" cols="30"
-                        placeholder="אני אוהב/ת לגנוב קפה מ200apps..."></textarea>
-                </label>
-            </fieldset>
-            <input type="submit" value="הרשמה!" />
-        </form>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>הרשמה</title>
+    <link rel="stylesheet" href="/new/form.css" />
+    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+</head>
+
+<body>
+    <h1>הרשמה <strong>עכשיו בחינם</strong></h1>
+    <p>מלאו את השדות החסרים והתחילו <strong>לטנדקס</strong></p>
+    <form action=''>
+        <fieldset id="details">
+            <label for="full-name">שם מלא <input id="full-name" name="full-name" type="text" required min="2"/></label>
+            <label for="useName">שם משתמש <input id="userName" name="last-name" type="text" required min="2" max="15"/></label>
+            <label for="email">אימייל<input id="email" name="email" type="email" required /></label>
+            <label for="password">סיסמא <input id="password" name="new-password" type="password"
+                    pattern="[a-z0-5]{8,}" required /></label>
+        </fieldset>
+        <fieldset>
+            <h4>מין</h4>
+            <label for="personal-account"><input id="personal-account" type="radio" name="account-type"
+                    class="inline" /> זכר</label>
+            <label for="business-account"><input id="business-account" type="radio" name="account-type"
+                    class="inline" /> נקבה</label>
+            <label for="business-account"><input id="business-account" type="radio" name="account-type"
+                    class="inline" /> אחר</label>
+            <label for="terms-and-conditions" name="terms-and-conditions">
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">כאן, העלו תמונת פרופיל מושכת:
+                <input id="profile-picture" type="file" name="file" /></label>
+            <label for="age">גיל:(בשנות כלב) <input id="age" type="number" name="age" min="18" max="120" /></label>
+            <label for="referrer">איך שמעת עלינו?
+                <select id="referrer" name="referrer">
+                    <option value="">בחרו ערך אחד מהרשימה</option>
+                    <option value="1">חבר\ה</option>
+                    <option value="2">רשתות חברתיות</option>
+                    <option value="3">w3school</option>
+                    <option value="4">אחר</option>
+                </select>
+            </label>
+            <label for="bio">מה תרצו שיידעו עליכם?
+                <textarea id="bio" name="bio" rows="3" cols="30"
+                    placeholder="אני אוהב/ת לגנוב קפה מ200apps..."></textarea>
+            </label>
+        </fieldset>
+        <button id="submit">הרשמה</button>
+    </form>
+</body>
+
 </html>
