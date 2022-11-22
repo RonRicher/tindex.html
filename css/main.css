@@ -1,0 +1,143 @@
+html{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+h3{
+    font-size: 6rem;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+h1{
+    width: 40rem;
+    /* width: 100vw; */
+    position: absolute;
+    top: 55rem;
+    right: 2rem;
+    color: black;
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+    opacity:1;
+    z-index: 1;
+   text-shadow: 0.2rem 0.2rem rgb(241, 237, 237);
+    
+}
+
+#top img{
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+#information{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, gray, rgb(240, 191, 191), gray) ;
+    flex-wrap: wrap;
+    padding: 10rem 0;
+}
+
+.order{
+   display: flex;
+   margin: 1rem auto;
+   
+  flex-wrap: wrap;
+  
+}
+
+.card{
+    display: flex;
+    gap: 2rem;
+    border: 2px solid #6e6c5f;
+    margin: 0 10rem;
+    width: 50rem;
+    border-radius: 1.2rem;
+    box-shadow: 4px 4px rgb(110, 108, 95);
+    padding-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #d192af40;
+    
+}
+
+.image{
+    height: 90%;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 1.2rem;
+}
+
+.card p{
+    width: 15rem;
+    color: rgb(66, 56, 56);
+    font-size: 2.5rem;
+}
+footer{
+    grid-column: 1/-1;
+}
+
+.card a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.video{
+    text-align: center;
+    padding: 5rem 0;
+    /* background: linear-gradient(180deg, gray, rgb(240, 191, 191), gray); */
+    background-color:  rgb(240, 191, 191);
+}
+
+.video h2{
+    text-shadow: 2px 2px white;
+    font-size: 4rem;
+}
+iframe{
+    width: 100rem;
+    height: 60rem;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+    html{
+        font-size: 6px;
+    }
+
+
+    .order{
+        display: block;
+     }
+     
+     .card{
+         height: 35rem;
+         margin: 10px auto;
+     }
+
+     iframe{
+        width: 50rem;
+        height:30rem;
+     }
+
+}

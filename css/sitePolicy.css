@@ -1,0 +1,17 @@
+html{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+body{
+    font-size: 1.75rem;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #FCB0C0, #FBC9D2);
+}
+
+
+main{ 
+    padding: 2rem;;
+}
+
