@@ -18,12 +18,12 @@ body{
 
 main{
     width: 100%;
-    grid-column: 1/-1;
 }
+
+
 
 h1{
     width: 40rem;
-    /* width: 100vw; */
     position: absolute;
     top: 55rem;
     right: 2rem;

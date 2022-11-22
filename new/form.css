@@ -13,23 +13,6 @@ body {
     padding-top: 5rem ;
 }
 
-.logo {
-    position: fixed;
-    right: 10rem;
-    top: 7rem;
-}
-.logo:hover{
-    transition: all 1s;
-    transform: scale(1.2);
-}
-
-
-
-.logo img {
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-}
 
 
 h1 {

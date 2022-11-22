@@ -8,13 +8,13 @@ header{
 }
 
 .logo img{
-    width: 20rem;
-    height: 20rem;
+    width: 10rem;
+    height: 10rem;
     position: relative;
     right: calc(50% - 7.5rem);
     border-radius: 50%;
     opacity: 1;
-    margin-top: 1.3333333333rem;
+    margin-top: 0;
 }
 .logo:hover{
     transition: all 1s;
