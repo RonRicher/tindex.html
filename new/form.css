@@ -1,0 +1,145 @@
+html {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #FCB0C0, #FBC9D2);
+    color: #191213;
+    font-size: 1rem;
+    padding-top: 5rem ;
+}
+
+.logo {
+    position: fixed;
+    right: 10rem;
+    top: 7rem;
+}
+.logo:hover{
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+
+
+.logo img {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+}
+
+main {
+
+    padding-bottom: 3.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+h1,
+p {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+form {
+    font-size: 1.75rem;
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-bottom: 2em;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: #0a0a23 groove 4px;
+    border-radius: 3%;
+    background: linear-gradient(90deg, #FCB0C0, #FBC9D2);
+    box-shadow: 5px 5px #0a0a23;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #FDF8F7;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+input,
+textarea {
+    background-color: #FDF8F7;
+    border: 1px solid #0a0a23;
+    color: #191213;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+    color: white;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+a {
+    color: #FDF8F7;
+}
+
+a:hover {
+    color: lightslategray;
+}
+
+@media only screen and (max-width: 800px) {
+
+    html{
+        font-size: 10px;
+    }
+    form{
+        border: none;
+        box-shadow: none;
+    }
+
+
+    .logo {
+        display: none;
+    }
+
+
+}
