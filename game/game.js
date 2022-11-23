@@ -111,10 +111,9 @@ function clearStatusClass(element) {
 
 function startTimer(duration, display) {
   let timer = duration, minutes, seconds;
-  setInterval(function () {
-    // if(document.querySelector('#time').textContent === '00:00'){
-    //   clearInterval()
-    // }
+  
+
+  let countDown = function() {
       minutes = parseInt(timer / 60, 10);
       seconds = parseInt(timer % 60, 10);
 
@@ -122,15 +121,20 @@ function startTimer(duration, display) {
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       display.textContent = minutes + ":" + seconds;
-
+      console.log(display.textContent)
+     
       if (--timer < 0) {
-          timer = duration;
+       clearInterval(my)
       }
-  }, 1000);
+  }
+ const my = setInterval(countDown, 1000);
+ 
 }
 
+
 nextButton.addEventListener('click' , function () {
-  let fiveMinutes = 10,
+  let tenSeconds = 10,
       display = document.querySelector('#time');
-  startTimer(fiveMinutes, display);
+  startTimer(tenSeconds, display);
+  
 });
