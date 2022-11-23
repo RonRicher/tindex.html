@@ -64,6 +64,13 @@ a:visited{
   color: aliceblue;
 }
 
+#time{
+  position: absolute;
+  top: 100px;
+  right: 570px;
+  font-size: 40px;
+}
+
   
   body.correct {
     background: linear-gradient(90deg, lime, greenyellow);

@@ -108,3 +108,29 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
+
+function startTimer(duration, display) {
+  let timer = duration, minutes, seconds;
+  setInterval(function () {
+    // if(document.querySelector('#time').textContent === '00:00'){
+    //   clearInterval()
+    // }
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = duration;
+      }
+  }, 1000);
+}
+
+nextButton.addEventListener('click' , function () {
+  let fiveMinutes = 10,
+      display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+});
