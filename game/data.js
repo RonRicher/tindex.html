@@ -1,5 +1,7 @@
 let questions = []
 
+
+
 const question = document.getElementById('question');
 const answer1 = document.getElementById('answer1');
 const answer2 = document.getElementById('answer2');
@@ -14,7 +16,6 @@ add.addEventListener('click', createNewQuestion);
 function returnToGame(){
 window.location.href = '/game/game.html'
 }
-
 
 function sendToLocalStorage(){
     add.removeEventListener('click',  sendToLocalStorage)
@@ -32,7 +33,7 @@ function sendToLocalStorage(){
     questions = []
 }
 
-localStorage.setItem('allQuestions', [])
+
 
 function createNewQuestion(){
         for(let i = 0; i < inputs.length; i++){
@@ -42,8 +43,8 @@ function createNewQuestion(){
        }
     if(questions.length === 2){
         add.removeEventListener('click', createNewQuestion)
-        // add.value = 'הוסף שאלות למאגר'
         alert('לא ניתן להוסיף יותר שאלות')
+        add.style.display = 'none'
    
         add.addEventListener('click', sendToLocalStorage)
     }
@@ -54,7 +55,8 @@ function createNewQuestion(){
           { text: answer2.value, correct: false },
           { text: answer3.value, correct: false },
           { text: answer4.value, correct: false }
-        ]
+        ],
+        score: 100
 
     })
     question.value = ''
