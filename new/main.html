@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="form.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -33,13 +34,14 @@
             <form action=''>
                 <fieldset id="details">
                     <h2>היכנסו ותהנו ממגוון אדיר של משחקי הכרויות</h2>
-                    <label for="useName">שם משתמש <input id="userName" name="last-name" type="text" required min="2"
-                            max="15" /></label>
-                    <label for="password">סיסמא <input id="password" name="new-password" type="password"
-                            pattern="[a-z0-5]{8,}" required /></label>
+                    <label for="userName">שם משתמש <input id="userName" name="userName" type="text" required minlength="2"
+                            maxlength="15" /></label>
+                    <label for="password">סיסמא <input id="password" name="password" type="password"
+                             required /></label>
                             <p>במידה ואינך רשום <a href="form.html">הירשם כאן</a></p>
                 </fieldset>
                 <button id="submit">כניסה</button>
+                <p id="wrongData" style="color:red"></p>
             </form>
         </main>
     </div>
