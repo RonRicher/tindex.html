@@ -4,6 +4,14 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+let questions;
+const questionsFromStorage = localStorage.getItem('allQuestions');
+console.log(questionsFromStorage)
+if(questionsFromStorage !== ''){
+questions = JSON.parse(questionsFromStorage)
+}
+
+
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -24,9 +32,10 @@ function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
-
+console.log(questions)
 function showQuestion(question) {
   questionElement.innerText = question.question
+ 
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
