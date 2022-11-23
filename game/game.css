@@ -24,6 +24,46 @@ html{
     align-items: center;
     background-color: hsl(var(--hue), 100%, 20%);
   }
+  header{
+    position: absolute;
+    top: 40px;
+    display: block;
+    width: 80%;
+    /* text-align: left; */
+    font-size: 4rem;
+    color: white;
+    
+  }
+
+  #score{
+    position: absolute;
+   
+    right: 1300px;
+  }
+#links{
+  font-size: 1rem;
+  padding: 10px 0;
+  color: white;
+  display: block;
+  position: absolute;
+  
+  width: 20%;
+}
+a{
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 2px 2px white;
+  color:aliceblue;
+  padding: 10px 10px;
+  margin: 20px 0;
+  display: block;
+  text-decoration: none;
+}
+
+a:visited{
+  color: aliceblue;
+}
+
   
   body.correct {
     background-color: green;

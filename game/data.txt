@@ -1,0 +1,205 @@
+[{
+        question: 'איך קוראים לכלי שמכינים בו חמאה',
+        answers: [
+          { text: 'מחבצה', correct: true },
+          { text: 'מחמאה', correct: false },
+          { text: 'מחבתה', correct: false },
+          { text: 'חמיתה', correct: false }
+        ],
+        score: 800
+
+    }
+
+{
+        question: 'מה שמו של סולן להקת התקווה 6?',
+        answers: [
+          { text: 'עמרי גליקמן', correct: true },
+          { text: 'שחר אבן צור', correct: false },
+          { text: 'גלעד ויטל', correct: false },
+          { text: 'אסף מרוז', correct: false }
+        ],
+        score: 700
+
+    }
+
+    {
+        question: 'מה שמה של בירתה של קניה',
+        answers: [
+          { text: 'ניירובי', correct: true },
+          { text: 'מומבסה', correct: false },
+          { text: 'קיסומו', correct: false },
+          { text: 'בונגומה', correct: false }
+        ],
+        score: 400
+
+    }
+
+    {
+        question: 'היכן עצרה תיבת נח בתום המבול',
+        answers: [
+          { text: 'הר אררט', correct: true },
+          { text: 'הר שאול', correct: false },
+          { text: 'הר סיני', correct: false },
+          { text: 'הר האוורסט', correct: false }
+        ],
+        score: 300
+
+    }
+
+    {
+        question: 'מה היה דובי מהארי פוטר',
+        answers: [
+          { text: 'גמד', correct: true },
+          { text: 'ענק', correct: false },
+          { text: 'אוכל מוות', correct: false },
+          { text: 'תלמיד בגריפינדור', correct: false }
+        ],
+        score: 100
+
+    }
+
+{
+        question: 'לפי התנ"ך, באיזה עץ הסתבך שיערו של אבשלום',
+        answers: [
+          { text: 'אלה', correct: true },
+          { text: 'אלון', correct: false },
+          { text: 'ארז', correct: false },
+          { text: 'אשוח', correct: false }
+        ],
+        score: 600
+
+    }
+
+    {
+        question: 'מה הפירוש של נחמה פורתא',
+        answers: [
+          { text: 'נחמה כלשהי, נחמה מועטת', correct: true },
+          { text: 'נחמה בנמל', correct: false },
+          { text: 'גחמת השעה', correct: false },
+          { text: 'אין משמעות', correct: false }
+        ],
+        score: 100
+
+    }
+
+    {
+        question: 'היכן נולדה הזמרת ריטה',
+        answers: [
+          { text: 'איראן', correct: true },
+          { text: 'מרוקו', correct: false },
+          { text: 'מצריים', correct: false },
+          { text: 'עיראק', correct: false }
+        ],
+        score: 200
+
+    }
+    {
+        question: 'איפה נמצא הכתב הקדום ביותר',
+        answers: [
+          { text: 'מסופוטמיה (בבל)', correct: true },
+          { text: 'הודו', correct: false },
+          { text: 'סין', correct: false },
+          { text: 'אלכסנדריה (מצריים)', correct: false }
+        ],
+        score: 500
+
+    }
+    {
+        question: 'כמה זמן לוקח ליהלומים להיווצר',
+        answers: [
+          { text: 'בין מיליארד ל3 מיליארד שנה', correct: true },
+          { text: '500 שנה', correct: false },
+          { text: '2000 שנה', correct: false },
+          { text: 'חמש מאות מיליון שנה', correct: false }
+        ],
+        score: 700
+
+    }]
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }
+    {
+        question: '',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false },
+          { text: '', correct: false },
+          { text: '', correct: false }
+        ],
+        score: 400
+
+    }]
