@@ -24,7 +24,7 @@ function objectFactory(username, password){
     }
 
     let userArrFromStorage = localStorage.getItem('usersArr');
-    if (userArrFromStorage !== null){
+    if (userArrFromStorage !== ''){
         usersArr = JSON.parse(userArrFromStorage);
     
         const checkExistUser = usersArr.some(user => user.userName === username)

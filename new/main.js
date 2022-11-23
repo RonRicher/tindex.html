@@ -13,7 +13,7 @@ function logIn(event) {
 
     for (let i = 0; i < arrUsers.length; i++) {
         if (userNameLogIn === arrUsers[i].userName && passwordLogIn === arrUsers[i].passWord) {
-            window.location.href= '/new/form.html';
+            window.location.href= '/new/games.html';
             break
         }
 

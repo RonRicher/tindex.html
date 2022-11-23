@@ -8,7 +8,7 @@ html{
   }
   
   :root {
-    --hue-neutral: 200;
+    --hue-neutral: 2800;
     --hue-wrong: 0;
     --hue-correct: 145;
   }
@@ -43,7 +43,7 @@ html{
 #links{
   font-size: 1rem;
   padding: 10px 0;
-  color: white;
+  color:white;
   display: block;
   position: absolute;
   
@@ -66,11 +66,11 @@ a:visited{
 
   
   body.correct {
-    background-color: green;
+    background: linear-gradient(90deg, lime, greenyellow);
   }
   
   body.wrong {
-    background-color: red;
+    background: linear-gradient(90deg, crimson, maroon);
   }
   
   .container {
@@ -93,7 +93,7 @@ a:visited{
   }
   
   .btn {
-    background-color: red;
+    
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
@@ -104,16 +104,18 @@ a:visited{
   }
   
   .btn:hover {
+    background-color: rgba(137, 43, 226, 0.828);
     border-color: black;
   }
   
   .btn.correct {
-    background-color: green;
+    background-color: rgb(33, 248, 33);
     color: black;
   }
   
   .btn.wrong {
-    --hue: var(--hue-wrong);
+    background-color: red;
+    
   }
   
   .start-btn, .next-btn {
