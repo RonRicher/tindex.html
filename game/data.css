@@ -1,15 +1,22 @@
 body{
     text-align: center;
-    background-color: blue;
+    background:linear-gradient(45deg,navy,red);
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+    color:white;
+    padding-bottom: 40px;
+    border-bottom: 2px solid white;
+}
+
 form{
-margin: 40px auto;
-border: 3px solid black;
+margin: 82.5px auto;
+border: 3px solid white;
 width: 40%;
 border-radius: 15px;
+background-color: linear-gradient(45deg,red,navy);
 }
 
 input{
@@ -25,6 +32,7 @@ input{
     display: inline-block;
    border-radius: 12px;
    padding: 13px 30px;
+   font-weight: bold;
 }
  
 #add:hover,#add1:hover{
