@@ -1,13 +1,32 @@
 body{
-    text-align: right;
+    text-align: center;
+    background-color: blue;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+margin: 40px auto;
+border: 3px solid black;
+width: 40%;
+border-radius: 15px;
 }
 
 input{
+    /* text-align: right; */
     display: block;
-    margin: 30px;
+    margin: 30px auto; 
+    padding: 13px 5px 13px 100px;
+    border-radius: 8px;
+    
 }
 
-button{
-    margin-right: 30px;
-
+#add,#add1{
+    display: inline-block;
+   border-radius: 12px;
+   padding: 13px 30px;
+}
+ 
+#add:hover,#add1:hover{
+    background-color: rgb(185, 235, 171);
 }
