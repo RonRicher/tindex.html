@@ -6,30 +6,32 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 let questions;
 const questionsFromStorage = localStorage.getItem('allQuestions');
-console.log(questionsFromStorage)
 if(questionsFromStorage !== ''){
 questions = JSON.parse(questionsFromStorage)
 }
 
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
+  currentQuestionIndex++;
+  setNextQuestion();
 })
 
 function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
-  setNextQuestion()
+  for(let i = 0; i < questions.length; i++){
+  questions[i].answers.sort(() => Math.random() - .5)}
+  currentQuestionIndex = 0;
+  questionContainerElement.classList.remove('hide');
+  setNextQuestion();
 }
 
 function setNextQuestion() {
   resetState()
+  
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 console.log(questions)
@@ -66,7 +68,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    startButton.innerText = 'התחל מחדש'
     startButton.classList.remove('hide')
   }
 }
