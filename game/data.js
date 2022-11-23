@@ -12,37 +12,35 @@ add1.addEventListener('click',sendToLocalStorage);
 add.addEventListener('click', createNewQuestion);
 
 function returnToGame(){
-window.location.href = '/game/game.html'
+window.location.href = '/game/game.html';
 }
 
 
 function sendToLocalStorage(){
-    add.removeEventListener('click',  sendToLocalStorage)
-    add1.addEventListener('click', returnToGame)
-    add1.value = 'חזור למשחק'
-    console.log(questions)
+    add.removeEventListener('click',  sendToLocalStorage);
+    add1.addEventListener('click', returnToGame);
+    add1.value = 'חזור למשחק';
+    console.log(questions);
     if(localStorage.getItem('allQuestions') === ''){
-        localStorage.setItem('allQuestions',JSON.stringify(questions))
+        localStorage.setItem('allQuestions',JSON.stringify(questions));
     }else{
-        const Questions = JSON.parse(localStorage.getItem('allQuestions'))
-        const allQuestions = Questions.concat(questions) 
-        localStorage.setItem('allQuestions',JSON.stringify(allQuestions))
+        const Questions = JSON.parse(localStorage.getItem('allQuestions'));
+        const allQuestions = Questions.concat(questions);
+        localStorage.setItem('allQuestions',JSON.stringify(allQuestions));
     }
     
     questions = []
 }
 
-localStorage.setItem('allQuestions', [])
-
 function createNewQuestion(){
         for(let i = 0; i < inputs.length; i++){
         if(inputs[i].value === ''){
-            return
+            return;
         }
        }
     if(questions.length === 2){
         add.removeEventListener('click', createNewQuestion)
-        // add.value = 'הוסף שאלות למאגר'
+        add.style.display ='none';
         alert('לא ניתן להוסיף יותר שאלות')
    
         add.addEventListener('click', sendToLocalStorage)
@@ -56,12 +54,12 @@ function createNewQuestion(){
           { text: answer4.value, correct: false }
         ]
 
-    })
-    question.value = ''
-    answer1.value = ''
-    answer2.value = ''
-    answer3.value = ''
-    answer4.value = ''
+    });
+    question.value = '';
+    answer1.value = '';
+    answer2.value = '';
+    answer3.value = '';
+    answer4.value = '';
     
 
     console.log(questions)

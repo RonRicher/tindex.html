@@ -4,6 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+
 let questions;
 const questionsFromStorage = localStorage.getItem('allQuestions');
 if(questionsFromStorage !== ''){
