@@ -4,8 +4,8 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreDiv = document.getElementById('score');
-const correctAudio = new('/audio/correctAudio.wav');
-const wrongAudio = '/audio/wrongAudio.wav';
+const correctAudio = document.getElementById('correctAudio');
+const wrongAudio = document.getElementById('wrongAudio');
 
 let score = 0;
 
@@ -86,6 +86,7 @@ function selectAnswer(e) {
     scoreDiv.textContent = score;
   }
   else{
+    wrongAudio.play();
     if(score >= 200){
     score -= 200;}
     else{
