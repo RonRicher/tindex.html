@@ -20,7 +20,9 @@ function summary(event){
 function objectFactory(username, password){
     let object = {
         userName: username,
-        passWord: password
+        passWord: password,
+        highScore: 0
+
     }
 
     let userArrFromStorage = localStorage.getItem('usersArr');
@@ -33,6 +35,7 @@ function objectFactory(username, password){
             return false;
         }
     }
+    
     usersArr.push(object);
     localStorage.setItem('usersArr', JSON.stringify(usersArr));
     window.location.href= '/main/main.html';

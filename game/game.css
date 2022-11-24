@@ -34,6 +34,13 @@ html{
     color: white;
     
   }
+  #highScore{
+    position: absolute;
+    right: 1200px;
+    font-size: 40px;
+    top: 100px;
+
+  }
 
   #score{
     position: absolute;

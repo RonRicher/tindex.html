@@ -11,9 +11,13 @@ const revealAnswer = document.getElementById('revealAnswer');
 let counter = 0;
 let tenSeconds = 10;
 let my = null;
+let userOnline = JSON.parse(localStorage.getItem('onlineUser'));
+let usersArr = JSON.parse(localStorage.getItem('usersArr'));
+
+let highScore = document.getElementById('highScore');
+highScore.textContent = 'High Score: ' + userOnline.highScore;
 
 let score = 0;
-
 let questions;
 const questionsFromStorage = localStorage.getItem('allQuestions');
 if (questionsFromStorage !== '') {
@@ -225,6 +229,19 @@ function gameOver(){
   winning.style.borderRadius = '12px';
   winning.style.padding = '20px';
   document.body.appendChild(winning);
+  if(userOnline.highScore < score){
+    userOnline.highScore = score;
+    localStorage.setItem('onlineUser', JSON.stringify(userOnline));
+    for(let i = 0; i < usersArr.length; i++){
+      if(usersArr[i].userName === userOnline.userName){
+        usersArr[i].highScore = score;
+        localStorage.setItem('usersArr', JSON.stringify(usersArr));
+      }
+      
+
+    }
+    
+  }
   if(score > 1000){
   winning.textContent = 'אתה אלוף!';
   winning.style.color = 'lime';
