@@ -4,6 +4,8 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreDiv = document.getElementById('score');
+const correctAudio = new('/audio/correctAudio.wav');
+const wrongAudio = '/audio/wrongAudio.wav';
 
 let score = 0;
 
@@ -79,6 +81,7 @@ function selectAnswer(e) {
     startButton.classList.remove('hide')
   }
   if(selectedButton.className === 'btn correct'){
+    correctAudio.play();
     score += questions[Math.floor(Math.random() * questions.length)].score;
     scoreDiv.textContent = score;
   }
