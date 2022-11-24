@@ -124,17 +124,19 @@ function startTimer(duration, display) {
       console.log(display.textContent)
      
       if (--timer < 0) {
-       clearInterval(my)
+        display.textContent = ''
+        clearInterval(my)
       }
   }
- const my = setInterval(countDown, 1000);
  
+  const my = setInterval(countDown, 1000);
+
 }
-
-
-nextButton.addEventListener('click' , function () {
+ let runTimer = function () {
   let tenSeconds = 10,
       display = document.querySelector('#time');
   startTimer(tenSeconds, display);
   
-});
+}
+startButton.addEventListener('click',runTimer );
+nextButton.addEventListener('click',runTimer );
