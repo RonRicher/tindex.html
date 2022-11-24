@@ -7,6 +7,7 @@ const scoreDiv = document.getElementById('score');
 const correctAudio = document.getElementById('correctAudio');
 const wrongAudio = document.getElementById('wrongAudio');
 
+
 let score = 0;
 
 let questions;
@@ -103,8 +104,7 @@ function setStatusClass(element, correct) {
     element.classList.add('correct');
   } else {
     element.classList.add('wrong')
-
-  }
+ }
 }
 
 function clearStatusClass(element) {
@@ -113,32 +113,36 @@ function clearStatusClass(element) {
 }
 
 
+
+
+
+
 function startTimer(duration, display) {
   let timer = duration, minutes, seconds;
-  
-
   let countDown = function() {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
-
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      display.textContent = minutes + ":" + seconds;
-      console.log(display.textContent)
-     
-      if (--timer < 0) {
-        display.textContent = ''
-        clearInterval(my)
-      }
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+  
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+    display.textContent = minutes + ":" + seconds;
+    console.log(display.textContent)
+   
+    if (--timer < 0) {
+      clearInterval(my);
+    }
   }
- 
-  const my = setInterval(countDown, 1000);
+  
+  countDown()
+   my = setInterval(countDown, 1000);
 
 }
+
+
  let runTimer = function () {
   let tenSeconds = 10,
-      display = document.querySelector('#time');
+  display = document.querySelector('#time');
   startTimer(tenSeconds, display);
   
 }
