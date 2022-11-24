@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>הרשמה</title>
+    <link rel="stylesheet" href="form.css" />
+    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <script src="form.js" defer></script>
+</head>
+
+<body>
+    <h1>הרשמה <strong>עכשיו בחינם</strong></h1>
+    <p>מלאו את השדות החסרים והתחילו <strong>לשחק</strong></p>
+    <form>
+        <fieldset id="details">
+            <label for="full-name">שם מלא <input id="full-name" name="full-name" type="text" required minlength="2" maxlength="15"/></label>
+            <label for="userName">שם משתמש <input id="userName" name="userName" type="text" required minlength="2" maxlength="15"/></label>
+            <label for="email">אימייל<input id="email" name="email" type="email" required /></label>
+            <label for="password">סיסמא <input id="password" name="password" type="password"
+                     required minlength="8" maxlength="15"/></label>
+        </fieldset>
+        <fieldset>
+            <h4>מין</h4>
+            <label for="male"><input id="male" type="radio" name="account-type"
+                    class="inline" /> זכר</label>
+            <label for="female"><input id="female" type="radio" name="account-type"
+                    class="inline" /> נקבה</label>
+            <label for="other"><input id="other" type="radio" name="account-type"
+                    class="inline" /> אחר</label>
+            <label for="terms-and-conditions" name="terms-and-conditions">
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">כאן, העלו תמונת פרופיל מושכת:
+                <input id="profile-picture" type="file" name="file" /></label>
+            <label for="age">גיל:(בשנות כלב) <input id="age" type="number" name="age" min="18" max="120" /></label>
+            <label for="referrer">איך שמעת עלינו?
+                <select id="referrer" name="referrer">
+                    <option value="">בחרו ערך אחד מהרשימה</option>
+                    <option value="1">חבר\ה</option>
+                    <option value="2">רשתות חברתיות</option>
+                    <option value="3">w3school</option>
+                    <option value="4">אחר</option>
+                </select>
+            </label>
+            <label for="bio">מה תרצו שיידעו עליכם?
+                <textarea id="bio" name="bio" rows="3" cols="30"
+                    placeholder="אני אוהב/ת לגנוב קפה מ200apps..."></textarea>
+            </label>
+        </fieldset>
+        <button id="submit">הרשמה</button>
+        <p id="existUserName" style="color:red"></p>
+    </form>
+</body>
+
+</html>

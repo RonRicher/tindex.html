@@ -1,0 +1,54 @@
+body {
+    background-image: url(/images/craft.webp);
+    margin-bottom: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img {
+    width: 250px;
+    object-fit: cover;
+}
+
+div {
+    margin: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px;
+
+}
+
+.div {
+    border: 2px solid rgb(242, 235, 243);
+    box-shadow: 5px 5px rgb(247, 241, 248);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+p {
+    width: 170px;
+    margin-left: 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+#gems-image{
+    height: 300px;
+}
+
+#trivia{
+    height: 100%;
+    object-fit: cover;
+}
