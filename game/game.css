@@ -33,11 +33,18 @@ html{
     color: white;
     
   }
+  #highScore{
+    position: absolute;
+    right: 1200px;
+    font-size: 40px;
+    top: 100px;
+
+  }
 
   #score{
     position: absolute;
-   
-    right: 1300px;
+    right: 1200px;
+    font-size: 50px;
   }
 #links{
   font-size: 1rem;
@@ -45,9 +52,14 @@ html{
   color:white;
   display: block;
   position: absolute;
-  
   width: 20%;
 }
+
+a:hover{
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+
 a{
   border: 3px solid white;
   border-radius: 8px;
@@ -58,6 +70,9 @@ a{
   display: block;
   text-decoration: none;
 }
+a:hover{
+  background-color: rgba(255, 255, 255, 0.589);
+}
 
 a:visited{
   color: aliceblue;
@@ -65,9 +80,9 @@ a:visited{
 
 #time{
   position: absolute;
-  top: 100px;
-  right: 570px;
-  font-size: 40px;
+  top: 50px;
+  right:650px;
+  font-size: 90px;
 }
 
   
@@ -138,5 +153,21 @@ a:visited{
   
   .hide {
     display: none;
+  }
+  .bonus{
+
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background: linear-gradient(45deg, navy, cyan);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    outline: none;
+    font-size: 1.2rem;
+    margin: 5px;
+
+  }
+
+  .bonus:hover{
+    background:rgba(0, 0, 128, 0.833);
   }
 

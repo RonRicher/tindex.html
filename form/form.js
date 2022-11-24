@@ -4,7 +4,7 @@ let usersArr = [];
 
 let submit = document.getElementById('submit');
 submit.addEventListener('click', summary);
-console.log("whattt");
+
 
 
 function summary(event){
@@ -20,7 +20,9 @@ function summary(event){
 function objectFactory(username, password){
     let object = {
         userName: username,
-        passWord: password
+        passWord: password,
+        highScore: 0
+
     }
 
     let userArrFromStorage = localStorage.getItem('usersArr');
@@ -33,11 +35,9 @@ function objectFactory(username, password){
             return false;
         }
     }
+    
     usersArr.push(object);
     localStorage.setItem('usersArr', JSON.stringify(usersArr));
-    window.location.href= '/new/main.html';
-    // return true;
+    window.location.href= '/main/main.html';
+    
 }
-// function changePage(){
-//     windows.location.replace ='/new/'
-// }

@@ -122,3 +122,10 @@ button{
  button:hover{
     background-color: rgba(0, 255, 255, 0.329);
  }
+
+ #notSignYet{
+    color:coral;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: right;
+ }

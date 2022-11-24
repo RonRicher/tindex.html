@@ -13,7 +13,9 @@ function logIn(event) {
 
     for (let i = 0; i < arrUsers.length; i++) {
         if (userNameLogIn === arrUsers[i].userName && passwordLogIn === arrUsers[i].passWord) {
-            window.location.href= '/new/games.html';
+            let object = arrUsers[i];
+            localStorage.setItem('onlineUser', JSON.stringify(object));
+            window.location.href= '/gamesPage/games.html';
             break
         }
 

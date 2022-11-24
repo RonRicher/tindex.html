@@ -14,6 +14,7 @@ h1{
 
 form{
 margin: 82.5px auto 220px auto;
+padding-bottom: 50px;
 border: 3px solid white;
 width: 40%;
 border-radius: 15px;
@@ -22,10 +23,9 @@ background-color: linear-gradient(45deg,red,navy);
 }
 
 input{
-    /* text-align: right; */
     display: block;
     margin: 30px auto; 
-    padding: 13px 5px 13px 100px;
+    padding: 20px 5px 20px 250px;
     border-radius: 8px;
     
 }
@@ -33,9 +33,14 @@ input{
 #add,#add1{
     display: inline-block;
    border-radius: 12px;
-   padding: 13px 30px;
+   padding: 20px 40px;
    font-weight: bold;
 }
+
+#add{
+    margin-left: 20px;
+}
+
  
 #add:hover,#add1:hover{
     background-color: rgb(185, 235, 171);
