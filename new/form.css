@@ -119,21 +119,6 @@ button{
     font-size: 2rem;
     border-radius: 1rem;
 }
-
-@media only screen and (max-width: 800px) {
-
-    html{
-        font-size: 10px;
-    }
-    form{
-        border: none;
-        box-shadow: none;
-    }
-
-
-    .logo {
-        display: none;
-    }
-
-
-}
+ button:hover{
+    background-color: rgba(0, 255, 255, 0.329);
+ }

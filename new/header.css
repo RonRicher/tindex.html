@@ -4,7 +4,7 @@ html{
 }
 
 header{
-    background-color:  #eb96a5;
+    background-color:  #bcd5df8a;
 }
 
 .logo img{
@@ -17,10 +17,6 @@ header{
     margin-top: 0;
 }
 
-.logo:hover{
-    transition: all 1s;
-    transform: scale(1.05);
-}
 
 nav{
     display: flex;

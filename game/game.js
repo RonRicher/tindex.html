@@ -112,3 +112,35 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
+
+function startTimer(duration, display) {
+  let timer = duration, minutes, seconds;
+  
+
+  let countDown = function() {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+      console.log(display.textContent)
+     
+      if (--timer < 0) {
+        display.textContent = ''
+        clearInterval(my)
+      }
+  }
+ 
+  const my = setInterval(countDown, 1000);
+
+}
+ let runTimer = function () {
+  let tenSeconds = 10,
+      display = document.querySelector('#time');
+  startTimer(tenSeconds, display);
+  
+}
+startButton.addEventListener('click',runTimer );
+nextButton.addEventListener('click',runTimer );
