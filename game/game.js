@@ -14,18 +14,16 @@ let my = null;
 let userOnline = JSON.parse(localStorage.getItem('onlineUser'));
 let usersArr = JSON.parse(localStorage.getItem('usersArr'));
 
-let highScore = document.getElementById('highScore');
-highScore.textContent = 'High Score: ' + userOnline.highScore;
-
 let score = 0;
+let highScore = document.getElementById('highScore');
+highScore.textContent = 'ניקוד שיא: ' + userOnline.highScore;
+
+
 let questions;
 const questionsFromStorage = localStorage.getItem('allQuestions');
 if (questionsFromStorage !== '') {
   questions = JSON.parse(questionsFromStorage);
 }
-
-
-
 nextBonus.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
@@ -42,7 +40,7 @@ revealAnswer.addEventListener('click', ()=>{
   });
   correctAudio.play();
   score += 200;
-  scoreDiv.textContent = 'Score: ' + score;
+  scoreDiv.textContent = 'ניקוד: ' + score;
   nextButton.classList.remove('hide');})
 
 
@@ -67,7 +65,7 @@ function startGame() {
   revealAnswer.classList.remove('hide');
   nextBonus.classList.remove('hide');
   
-  scoreDiv.textContent = 'Score: '+ score;
+  scoreDiv.textContent = 'ניקוד: '+ score;
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   for (let i = 0; i < questions.length; i++) {
@@ -134,7 +132,7 @@ function selectAnswer(e) {
   if (selectedButton.className === 'btn correct') {
     correctAudio.play();
     score += questions[Math.floor(Math.random() * questions.length)].score;
-    scoreDiv.textContent = 'Score: ' + score;
+    scoreDiv.textContent = 'ניקוד: ' + score;
   }
   else {
     wrongAudio.play();
@@ -144,7 +142,7 @@ function selectAnswer(e) {
     else {
       score = 0;
     }
-    scoreDiv.textContent = 'Score: ' + score;
+    scoreDiv.textContent = 'ניקוד: ' + score;
   }
   
   
@@ -157,8 +155,7 @@ function setStatusClass(element, correct) {
   if (correct) {
     element.classList.add('correct');
   } else {
-    element.classList.add('wrong')
-
+    element.classList.add('wrong');
   }
 }
 
@@ -169,53 +166,77 @@ function clearStatusClass(element) {
 }
 
 
-
-
-
-
 function startTimer(duration, display) {
   console.log('timer')
   let timer = duration, minutes, seconds;
-  
 
-  let countDown = function() {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+  let countDown = function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
 
-      display.textContent = minutes + ":" + seconds;
-      console.log(display.textContent)
-     
-      if (--timer < 0) {
-        display.textContent = ''
-        clearInterval(my)
-      }
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+    display.textContent = minutes + ":" + seconds;
+    console.log(display.textContent);
+    if(document.getElementById('time').textContent === '00:00'){
+    
+      setTimeout(()=>{
+     nextBonus.classList.add('hide');
+     revealAnswer.classList.add('hide');
+      setStatusClass(document.body, false);  
+      Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+      });
+      nextButton.classList.remove('hide');
+      wrongAudio.play();
+    if (score >= 200) {
+      score -= 200;
+    }
+    else {
+      score = 0;
+    }
+    scoreDiv.textContent = 'ניקוד: ' +score;}, 1000)}
+
+    if(counter === 8){
+      clearInterval(my);
+    }
+   
+    if (--timer < 0) {
+      clearInterval(my);
+    }
   }
- 
-  const my = setInterval(countDown, 1000);
+   
+  my = setInterval(countDown, 1000);
 
 }
- let runTimer = function () {
-  let tenSeconds = 10,
-      display = document.querySelector('#time');
+let runTimer = function () {
+  display = document.querySelector('#time');
   startTimer(tenSeconds, display);
 
 }
 
 
 function gameOver(){
+  const headerLink = document.querySelectorAll('.link');
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('link');
+    headerLink[i].classList.add('gray')
+  }
+
+
   document.querySelector('.container').style.display='none';
   document.getElementById('time').style.display = 'none';
 
   let winning = document.createElement('h1');
   winning.style.fontSize = '150px';
-  
   winning.style.backgroundColor = 'white';
   winning.style.borderRadius = '12px';
   winning.style.padding = '20px';
   document.body.appendChild(winning);
+
+  
   if(userOnline.highScore < score){
     userOnline.highScore = score;
     localStorage.setItem('onlineUser', JSON.stringify(userOnline));
@@ -232,15 +253,18 @@ function gameOver(){
   if(score > 1000){
   winning.textContent = 'אתה אלוף!';
   winning.style.color = 'lime';
+  document.querySelector('body').style.backgroundColor = 'lime';
   }
   else if(score > 500){
   winning.textContent = 'תשתפר!';
   winning.style.color = 'gold';
+  document.querySelector('body').style.backgroundColor = 'gold';
   }
   else{
     winning.textContent = 'אתה מודח!';
     winning.style.color = 'red';
+    document.querySelector('body').style.backgroundColor = 'red';
+   
   }
 
 }
-

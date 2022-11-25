@@ -46,6 +46,8 @@ html{
     right: 1200px;
     font-size: 50px;
   }
+
+
 #links{
   font-size: 1rem;
   padding: 10px 0;
@@ -53,23 +55,27 @@ html{
   display: block;
   position: absolute;
   width: 20%;
+  text-align: center;
 }
-
-a:hover{
-  background-color: rgba(255, 255, 255, 0.589);
-}
-
 
 a{
   border: 3px solid white;
   border-radius: 8px;
   box-shadow: 2px 2px white;
-  color:aliceblue;
   padding: 10px 10px;
   margin: 20px 0;
   display: block;
   text-decoration: none;
 }
+
+#links .link{
+  color:aliceblue;
+}
+
+#links .gray{
+color: rgb(42, 49, 49);
+}
+
 a:hover{
   background-color: rgba(255, 255, 255, 0.589);
 }
@@ -114,7 +120,6 @@ a:visited{
   }
   
   .btn {
-    
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
@@ -122,6 +127,7 @@ a:visited{
     color: white;
     outline: none;
     font-size: 1rem;
+    cursor: pointer;
   }
   
   .btn:hover {
@@ -154,8 +160,10 @@ a:visited{
   .hide {
     display: none;
   }
+  
+  
   .bonus{
-
+    cursor: pointer;
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background: linear-gradient(45deg, navy, cyan);
     border-radius: 5px;
