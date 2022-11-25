@@ -19,6 +19,8 @@ let score = 0;
 let highScore = document.getElementById('highScore');
 highScore.textContent = 'ניקוד שיא: ' + userOnline.highScore;
 
+startButton.addEventListener('click', startGame)
+
 
 let questions;
 const questionsFromStorage = localStorage.getItem('allQuestions');
