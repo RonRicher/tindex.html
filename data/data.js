@@ -28,7 +28,7 @@ function sendToLocalStorage() {
         localStorage.setItem('allQuestions', JSON.stringify(allQuestions));
     }
 
-    questions = []
+    questions = [];
 }
 
 function createNewQuestion() {
